@@ -41,3 +41,33 @@
      - InternalError => informar "Hubo un error interno en el el servidor"
      - AlienError => informar "Una anomalia intercepto la informacion"
      2. Si no hubo un error, informar el objeto persona
+
+3. Descarga de informacion prohibida
+   : Crear una funcion llamada **pedirUsuario** que retorna un usuario al azar de la siguiente
+   lista:
+   ```js
+   let lista = [
+     {
+       id: 19310,
+       nombre: 'Bautista',
+     },
+     {
+       id: 90010,
+       nombre: 'Ema',
+     },
+     {
+       id: 00519,
+       nombre: 'Lucas',
+     },
+     {
+       id: 00000,
+       nombre: 'Meison',
+     },
+   ]
+   ```
+   La funcion **pedirUsuario** dispara un error llamado 'ForbiddenInformation' si el usuario
+   elegido es el del `id = 00000`
+   Llamar a la funcion **pedirUsuario** dentro de la funcion **pedirInformacion** para cambiar el
+   retorno de la funcion **pedirInformacion** .
+   Considerar que la funcion **pedirInformacion** ahora tiene que capturar un error, cuando la
+   capture debe disparar un error 'NetworkError'.
