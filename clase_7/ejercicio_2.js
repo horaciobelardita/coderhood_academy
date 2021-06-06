@@ -1,28 +1,35 @@
-function pedirInformacion() {
-  let persona = { id: 19310, nombre: 'Bautista', apellido: 'Di Santo' }
+function lte(value) {
+  return (field) => field <= value
+}
 
-  const randomNumber = Math.random()
+function getError(number) {
   const errores = {
     NetworkError: 'Hubo un problema en la conexion de internet',
     InternalError: 'Hubo un error interno en el el servidor',
     AlienError: 'Una anomalia intercepto la informacion',
   }
+  const error = [
+    [lte(0.1), errores.AlienError],
+    [lte(0.18), errores.InternalError],
+    [lte(0.25), errores.NetworkError],
+  ].find(([fn]) => fn(number))
+  return error?.pop()
+}
 
-  if (randomNumber <= 0.1) {
-    throw new Error(errores.AlienError)
-  }
-  if (randomNumber <= 0.18) {
-    throw new Error(errores.InternalError)
-  }
-  if (randomNumber <= 0.25) {
-    throw new Error(errores.NetworkError)
-  }
+function getInfo() {
+  let person = { id: 19310, nombre: 'Bautista', apellido: 'Di Santo' }
 
-  return console.log(persona)
+  const randomNumber = Math.random()
+
+  const error = getError(randomNumber)
+  if (error) {
+    throw new Error(error)
+  }
+  return console.log(person)
 }
 
 try {
-  pedirInformacion()
-} catch ({ message }) {
-  console.error(message)
+  getInfo()
+} catch (error) {
+  console.error(error)
 }
