@@ -110,6 +110,8 @@ resultado esperado
 '¡Hola, mundo! ¿Todo bien? Me alegro.'
 ```
 
+---
+
 5. Pedidos
    Tenemos un array con pedidos para nuestro negocio de comidas. Obtener un array con solo aquellos pedidos que incluyan algun
    condimento extra.
@@ -132,6 +134,8 @@ const resultado = [
   { id: '1', pedido: 'pancho', extras: ['ketchup'] },
 ]
 ```
+
+---
 
 6. Usuario y su perfil
    : Tenemos dos objetos, uno con la información de usuario, y otro con la información personal de dicho usuario,
