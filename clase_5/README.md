@@ -3,7 +3,7 @@
 ---
 
 1. Dado un array de alumnos de Coderhood Academy,
-   indicar quien es el que lidera el ranking de paricipacion en Discord
+   indicar quien es el que lidera el **ranking** de paricipacion en Discord
 
 ```js
 let alumnos = [
@@ -18,13 +18,13 @@ let alumnos = [
 
 2.  Dado un array de estudiantes de una universidad,
 
-    ```js
-    const alumnos = [
-      { nombre: 'Ema', carrera: 'Ingenieria en computacion' },
-      { nombre: 'Luis', carrera: 'Produccion audiovisual' },
-      { nombre: 'Pablo', carrera: 'Licenciatura en sistemas' },
-      { nombre: 'Meison', carrera: 'Ingenieria en computacion' },
-    ]
-    ```
+```js
+const alumnos = [
+{ nombre: 'Ema', carrera: 'Ingenieria en computacion' },
+{ nombre: 'Luis', carrera: 'Produccion audiovisual' },
+{ nombre: 'Pablo', carrera: 'Licenciatura en sistemas' },
+{ nombre: 'Meison', carrera: 'Ingenieria en computacion' },
+]
+```
 
-    mostrar los nombres de los estudiantes de la carrera **Ingenieria en computacion**.
+mostrar los nombres de los estudiantes de la carrera **Ingenieria en computacion**.
