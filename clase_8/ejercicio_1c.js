@@ -1,12 +1,12 @@
 function divide(dividend, divider) {
   return new Promise((resolve, reject) => {
-    const timeToResolve = 3000
+    const timeOut = 3000
+    if (divider === 0) {
+      return reject(new Error('Zero Division Error: division by zero'))
+    }
     setTimeout(() => {
-      if (divider === 0) {
-        reject(new Error('Zero Division Error'))
-      }
       resolve(dividend / divider)
-    }, timeToResolve)
+    }, timeOut)
   })
 }
 
